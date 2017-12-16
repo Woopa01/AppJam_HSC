@@ -10,7 +10,7 @@
         android:layout_height="?attr/actionBarSize">
 
         <RelativeLayout
-            android:background="@color/colorPink"
+            android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
