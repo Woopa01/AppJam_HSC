@@ -143,7 +143,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/first_petition_button"
+                android:id="@+id/second_petition_button"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

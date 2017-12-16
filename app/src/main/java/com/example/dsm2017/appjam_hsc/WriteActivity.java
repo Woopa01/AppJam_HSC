@@ -104,7 +104,8 @@ public class WriteActivity extends AppCompatActivity {
 
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(WriteActivity.this,MainActivity.class);
+                            Intent intent = new Intent(WriteActivity.this,SecondViewAcitivity.class);
+                            intent.putExtra("1","1");
                             startActivity(intent);
                             dialog.cancel();
                             secondpetition.setVisibility(View.VISIBLE);

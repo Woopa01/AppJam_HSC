@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     int flag = 0;
     FloatingActionButton write_button;
     LinearLayout first_petition,second_petition_string,second_petition;
+    String s = "0";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,12 +34,18 @@ public class MainActivity extends AppCompatActivity {
         second_petition = (LinearLayout) findViewById(R.id.second_petition);
         second_petition_string = (LinearLayout) findViewById(R.id.second_petition_string);
 
-        if(flag==0){
-        second_petition.setVisibility(View.INVISIBLE);
-        second_petition_string.setVisibility(View.INVISIBLE);
-            }
 
-        write_button.setOnClickListener(new FloatingActionButton.OnClickListener(){
+      /*  Intent intent = getIntent();
+        s = intent.getExtras().getString("1");
+
+       if(s.equals("1")==true) {
+           second_petition.setVisibility(View.VISIBLE);
+           second_petition_string.setVisibility(View.VISIBLE);
+        } else {
+            second_petition.setVisibility(View.INVISIBLE);
+            second_petition_string.setVisibility(View.INVISIBLE);
+        }
+*/        write_button.setOnClickListener(new FloatingActionButton.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -60,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,SecondViewAcitivity.class);
                 startActivity(intent);
-                second_petition.setVisibility(View.VISIBLE);
-                second_petition_string.setVisibility(View.VISIBLE);
             }
         });
 

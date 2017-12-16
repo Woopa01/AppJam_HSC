@@ -40,7 +40,7 @@
                 android:id="@+id/complete_mainlink2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="메인화면으로"
+                android:text="확인"
                 android:textSize="15sp"
                 android:textColor="#ffffff"
                 android:background="@color/colorPrimary"/>
