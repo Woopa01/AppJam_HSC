@@ -73,6 +73,7 @@
 
         <Button
             android:text="로그인"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
             android:id="@+id/signin_link"
             android:layout_width="250dp"

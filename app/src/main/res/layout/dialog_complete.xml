@@ -42,7 +42,8 @@
                 android:layout_height="match_parent"
                 android:text="메인화면으로"
                 android:textSize="15sp"
-                android:background="@color/colorBlue"/>
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimary"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

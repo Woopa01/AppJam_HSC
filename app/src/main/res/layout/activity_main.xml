@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context="com.example.dsm2017.appjam_hsc.LoginActivity">
 
     <LinearLayout
@@ -69,12 +70,18 @@
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:text="최신순"
-                    android:background="#7895ca"/>
+                    android:textColor="#3f3f3f"
+                    android:background="@color/colorBlue"/>
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"></LinearLayout>
                 <Button
                     android:id="@+id/button_main_best"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:text="추천순"
+                    android:textColor="#3f3f3f"
                     android:background="@color/colorBlue"/>
             </LinearLayout>
 
