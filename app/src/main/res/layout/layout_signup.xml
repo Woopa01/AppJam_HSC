@@ -2,64 +2,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:weightSum="20"
+    android:background="@color/colorPrimary">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical"
+        android:gravity="bottom">
     <ImageView
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/app_icon"
         android:layout_gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="70dp"/>
-
-    <TextView
-        android:text="학.쏘.청"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+        <TextView
+            android:text="학.쏘.청"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40sp">
 
         <EditText
             android:id="@+id/signup_name"
             android:hint="name"
-            android:layout_width="125dp"
+            android:textColorHint="#ffffff"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/signup_student_id"
             android:hint="student id"
-            android:layout_width="125dp"
+            android:textColorHint="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/signup_password"
+            android:inputType="textPassword"
+            android:hint="password"
+            android:textColorHint="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/signup_checkpassword"
+            android:inputType="textPassword"
+            android:hint="check password"
+            android:textColorHint="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/signup_password"
-        android:inputType="textPassword"
-        android:hint="password"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/signup_checkpassword"
-        android:inputType="textPassword"
-        android:hint="check password"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="4"
+    android:gravity="center">
     <Button
         android:id="@+id/signup_button"
         android:text="가입하기"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:textColor="@color/colorPrimary"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_roundbutton"/>
+</LinearLayout>
 </LinearLayout>

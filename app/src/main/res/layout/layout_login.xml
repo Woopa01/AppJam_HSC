@@ -4,23 +4,27 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="20">
+    android:weightSum="20"
+    android:background="@color/colorPrimary">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="11"
+    android:layout_weight="10"
+    android:layout_marginBottom="20dp"
     android:orientation="vertical"
     android:gravity="bottom">
 
     <ImageView
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/app_icon"
         android:layout_gravity="center"
         android:layout_width="150dp"
         android:layout_height="150dp"/>
 
     <TextView
         android:text="학.쏘.청"
+        android:textColor="#ffffff"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"/>
@@ -30,54 +34,59 @@
     android:layout_height="0dp"
     android:layout_marginLeft="40dp"
     android:layout_marginRight="40dp"
-    android:layout_weight="3"
+    android:layout_weight="2"
     android:gravity="center">
     <EditText
         android:hint="username"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center_horizontal|center_vertical"
         android:id="@+id/EditText_id"
+        android:textColorHint="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:gravity="center">
         <EditText
             android:inputType="textPassword"
             android:hint="password"
-            android:layout_gravity="center_horizontal"
+            android:textColorHint="#ffffff"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:id="@+id/EditText_password"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"></LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:gravity="center">
 
         <Button
-            android:layout_marginLeft="90dp"
             android:text="로그인"
-            android:textColor="#ffffff"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/signin_link"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_roundbutton"/>
+
+        <TextView
+            android:id="@+id/signup_link"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"/>
-
-        <Button
-            android:layout_marginLeft="10dp"
             android:text="회원가입"
             android:textColor="#ffffff"
-            android:id="@+id/signup_link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"/>
+            android:textSize="15sp" />
 
     </LinearLayout>
 </LinearLayout>

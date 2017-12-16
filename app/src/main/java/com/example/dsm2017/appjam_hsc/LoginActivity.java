@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -22,7 +23,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class LoginActivity extends AppCompatActivity {
 
     EditText signin_id, signin_password;
-    Button signin_button,signup_button;
+    Button signin_button;
+    TextView signup_link;
     Retrofit retrofit;
     RetrofitService retrofitService;
     static String url = "http://60.0.15.124:3000";
@@ -35,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         signin_id = (EditText) findViewById(R.id.EditText_id);
         signin_password = (EditText) findViewById(R.id.EditText_password);
         signin_button = (Button) findViewById(R.id.signin_link);
-        signup_button = (Button) findViewById(R.id.signup_link);
+        signup_link = (TextView) findViewById(R.id.signup_link);
 
         signin_button.setOnClickListener(new Button.OnClickListener(){
 
@@ -46,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
         });
 
-        signup_button.setOnClickListener(new Button.OnClickListener(){
+        signup_link.setOnClickListener(new TextView.OnClickListener(){
 
             @Override
             public void onClick(View v) {
