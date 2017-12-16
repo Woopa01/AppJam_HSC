@@ -1,4 +1,4 @@
-package com.example.dsm2017.appjam_hsc;
+package com.example.dsm2017.appjam_hsc.Retrofit;
 
 import java.util.Map;
 
@@ -7,6 +7,7 @@ import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 /**
@@ -26,5 +27,9 @@ public interface RetrofitService {
     @FormUrlEncoded
     @POST("/addPetition")
     Call<ResponseBody> PostPetition(@FieldMap Map<String,String> map);
+
+    @FormUrlEncoded
+    @POST("/showPetition")
+    Call<ListItemRepo> PostgetItem(@FieldMap Map<String,String> map);
 
 }

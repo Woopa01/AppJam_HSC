@@ -4,17 +4,21 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresPermission;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dsm2017.appjam_hsc.ListView.ListViewAdapter;
+import com.example.dsm2017.appjam_hsc.Retrofit.RetrofitService;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import okhttp3.ResponseBody;
@@ -25,7 +29,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.example.dsm2017.appjam_hsc.LoginActivity.url;
-import static com.example.dsm2017.appjam_hsc.R.layout.dialog_complete;
 
 /**
  * Created by dsm2017 on 2017-12-16.
@@ -38,15 +41,20 @@ public class WriteActivity extends AppCompatActivity {
     Retrofit retrofit;
     RetrofitService retrofitService;
     String petition = "0";
+    ListView listView;
+    ListViewAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_writepage);
 
+        listView = (ListView) findViewById(R.id.listview);
         petition_title = (EditText) findViewById(R.id.petition_title_input);
         petition_explain = (EditText) findViewById(R.id.petition_explain_input);
         send_petition = (TextView) findViewById(R.id.send_petition);
+        adapter = new ListViewAdapter();
+
 
         send_petition.setOnClickListener(new TextView.OnClickListener(){
 
@@ -56,6 +64,7 @@ public class WriteActivity extends AppCompatActivity {
                     Toast.makeText(WriteActivity.this, "글을 입력해주세요.", Toast.LENGTH_SHORT).show();
                 } else {
                     PostPetitionData(petition_title.getText().toString(), petition_explain.getText().toString());
+
                 }
             }
 
@@ -65,7 +74,7 @@ public class WriteActivity extends AppCompatActivity {
 
     }
 
-    public void PostPetitionData(String title, String explain) {
+    public void PostPetitionData(final String title, String explain) {
         retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -96,6 +105,8 @@ public class WriteActivity extends AppCompatActivity {
                             Intent intent = new Intent(WriteActivity.this,MainActivity.class);
                             startActivity(intent);
                             dialog.cancel();
+                            adapter.addItem(title,petition);
+                            listView.setAdapter(adapter);
                         }
 
                     });
@@ -115,7 +126,6 @@ public class WriteActivity extends AppCompatActivity {
                 Toast.makeText(WriteActivity.this, "인터넷 연결을 확인해주세요.", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
 }

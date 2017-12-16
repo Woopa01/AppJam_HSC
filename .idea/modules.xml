@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AppJam_HSC.iml" filepath="$PROJECT_DIR$/AppJam_HSC.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\GitHub\AppJam_HSC\app\app.iml" filepath="D:\GitHub\AppJam_HSC\app\app.iml" />
     </modules>
   </component>
 </project>
