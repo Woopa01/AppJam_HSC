@@ -32,6 +32,7 @@
                 android:text="학쏘청"
                 android:layout_centerInParent="true"/>
             <TextView
+                android:id="@+id/send_petition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -48,6 +49,7 @@
         android:layout_weight="1"
         android:layout_margin="10dp">
         <EditText
+            android:id="@+id/petition_title_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="제목을 작성해주세요."/>
@@ -58,6 +60,7 @@
         android:layout_weight="5"
         android:layout_margin="10dp">
         <EditText
+            android:id="@+id/petition_explain_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="내용을 작성해주세요."

@@ -20,7 +20,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.example.dsm2017.appjam_hsc.MainActivity.url;
+import static com.example.dsm2017.appjam_hsc.LoginActivity.url;
 
 /**
  * Created by dsm2017 on 2017-12-16.
@@ -87,7 +87,7 @@ public class SignUpActivity extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.code() == 200 ){
                     Log.d("RETROFIT","success");
-                    Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
+                    Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
                     startActivity(intent);
                     Toast.makeText(SignUpActivity.this, "성공적으로 회원가입 되었습니다.", Toast.LENGTH_SHORT).show();
                 } else{

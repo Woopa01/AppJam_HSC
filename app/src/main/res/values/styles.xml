@@ -6,5 +6,6 @@
         <item name="colorPrimary">#f6cac9</item>
         <item name="colorPrimaryDark">#91a8d2</item>
         <item name="colorAccent">#f37f7c</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
     </style>
 </resources>
