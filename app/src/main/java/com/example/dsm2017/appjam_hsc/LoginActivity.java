@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +29,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
+    LinearLayout second, second2;
+    View activity_main;
     EditText signin_id, signin_password;
     Button signin_button;
     TextView signup_link;
@@ -52,8 +55,12 @@ public class LoginActivity extends AppCompatActivity {
         signin_password = (EditText) findViewById(R.id.EditText_password);
         signin_button = (Button) findViewById(R.id.signin_link);
         signup_link = (TextView) findViewById(R.id.signup_link);
-        listview = (ListView) findViewById(R.id.listview);
-        adapter = new ListViewAdapter();
+       activity_main = getLayoutInflater().inflate(R.layout.activity_main,null);
+
+       second = activity_main.findViewById(R.id.second_petition);
+       second2 = activity_main.findViewById(R.id.second_petition_string);
+
+
 
         signin_button.setOnClickListener(new Button.OnClickListener() {
 
@@ -94,8 +101,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.code() == 200) {
                     Log.d("RETROFIT", "success");
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("flag",4);
                     startActivity(intent);
                     Toast.makeText(LoginActivity.this, "성공적으로 로그인 되었습니다.", Toast.LENGTH_SHORT).show();
+                    second.setVisibility(View.INVISIBLE);
+                    second2.setVisibility(View.INVISIBLE);
   //                  PostgetList(string);
                 } else {
                     Log.d("RETROFIT", "failed");

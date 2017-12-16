@@ -41,19 +41,21 @@ public class WriteActivity extends AppCompatActivity {
     Retrofit retrofit;
     RetrofitService retrofitService;
     String petition = "0";
-    ListView listView;
-    ListViewAdapter adapter;
+    LinearLayout secondpetition,secondpetition_string;
+    View Activity_main;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_writepage);
 
-        listView = (ListView) findViewById(R.id.listview);
         petition_title = (EditText) findViewById(R.id.petition_title_input);
         petition_explain = (EditText) findViewById(R.id.petition_explain_input);
         send_petition = (TextView) findViewById(R.id.send_petition);
-        adapter = new ListViewAdapter();
+        Activity_main = getLayoutInflater().inflate(R.layout.activity_main,null);
+
+        secondpetition = Activity_main.findViewById(R.id.second_petition);
+        secondpetition_string = Activity_main.findViewById(R.id.second_petition_string);
 
 
         send_petition.setOnClickListener(new TextView.OnClickListener(){
@@ -105,8 +107,8 @@ public class WriteActivity extends AppCompatActivity {
                             Intent intent = new Intent(WriteActivity.this,MainActivity.class);
                             startActivity(intent);
                             dialog.cancel();
-                            adapter.addItem(title,petition);
-                            listView.setAdapter(adapter);
+                            secondpetition.setVisibility(View.VISIBLE);
+                            secondpetition_string.setVisibility(View.VISIBLE);
                         }
 
                     });
