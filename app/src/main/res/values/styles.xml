@@ -8,4 +8,7 @@
         <item name="colorAccent">#f37f7c</item>
         <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
     </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
 </resources>
