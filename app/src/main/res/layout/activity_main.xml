@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:background="#ffffff"
     tools:context="com.example.dsm2017.appjam_hsc.LoginActivity">
 
     <LinearLayout
@@ -22,17 +22,19 @@
             android:layout_centerHorizontal="true"
             android:background="@color/colorPrimary"
             app:contentInsetStart="0dp">
+
             <RelativeLayout
-                android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
+
                 <TextView
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:text="메인"
-                    android:layout_centerInParent="true"/>
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
             </RelativeLayout>
         </android.support.v7.widget.Toolbar>
 
@@ -40,67 +42,151 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
                 android:layout_margin="10dp"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
                 <EditText
                     android:layout_width="330dp"
                     android:layout_height="match_parent"
                     android:hint="제목을 입력하세요."
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
+
                 <ImageView
-                    android:layout_gravity="center_vertical"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
                     android:background="@android:color/transparent"
                     android:src="@drawable/search_icon" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
                 android:gravity="right"
-                android:layout_marginRight="10dp">
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/button_main_earliest"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
                     android:text="최신순"
-                    android:textColor="#3f3f3f"
-                    android:background="@color/colorBlue"/>
+                    android:textColor="#3f3f3f" />
+
                 <LinearLayout
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:background="#ffffff"></LinearLayout>
+
                 <Button
                     android:id="@+id/button_main_best"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
                     android:text="추천순"
-                    android:textColor="#3f3f3f"
-                    android:background="@color/colorBlue"/>
+                    android:textColor="#3f3f3f" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorPrimary"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
+                android:layout_marginRight="15dp"
+                android:background="@color/colorPrimary"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="10">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="8"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="졸려요"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="22sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textSize="22sp"
+                        android:gravity="right"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="10">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="8"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="졸려요"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textSize="22sp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"></LinearLayout>
             </LinearLayout>
 
-            <ListView
-                android:id="@+id/listview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:choiceMode="singleChoice"
-                android:divider="#bebebe"
-                android:dividerHeight="2dp"></ListView>
         </LinearLayout>
+
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
