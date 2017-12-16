@@ -4,28 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        app:contentInsetStart="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
-
-        <RelativeLayout
-            android:background="@color/colorPrimary"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:textColor="#ffffff"
-                android:textSize="20sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="학쏘청"/>
-
-        </RelativeLayout>
-
-    </android.support.v7.widget.Toolbar>
-
     <ImageView
         android:src="@mipmap/ic_launcher"
         android:layout_gravity="center"
