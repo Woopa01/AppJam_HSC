@@ -21,7 +21,8 @@
                 android:id="@+id/number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1" />
+                android:text="1"
+                android:textSize="25sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -34,7 +35,8 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="졸려요" />
+                android:text="졸려요"
+                android:textSize="25sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -47,7 +49,8 @@
                 android:id="@+id/numPerson"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1명" />
+                android:text="1명"
+                android:textSize="25sp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

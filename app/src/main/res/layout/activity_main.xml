@@ -19,7 +19,7 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:background="@color/colorPink"
+            android:background="@color/colorPrimary"
             app:contentInsetStart="0dp"></android.support.v7.widget.Toolbar>
 
         <LinearLayout
@@ -48,19 +48,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:orientation="horizontal"
-                android:gravity="right">
+                android:gravity="right"
+                android:layout_marginRight="10dp">
                 <Button
                     android:id="@+id/button_main_earliest"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:text="최신순"
-                    android:background="@color/colorAccent"/>
+                    android:background="@color/colorPrimary"/>
                 <Button
                     android:id="@+id/button_main_best"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:text="추천순"
-                    android:background="@color/colorPink"/>
+                    android:background="@color/colorBlue"/>
             </LinearLayout>
 
             <ListView
