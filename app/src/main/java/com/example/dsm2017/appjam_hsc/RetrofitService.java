@@ -19,4 +19,8 @@ public interface RetrofitService {
     @POST("/login")
     Call<ResponseBody> PostLoginData(@FieldMap Map<String,String> map);
 
+    @FormUrlEncoded
+    @POST("/addUser")
+    Call<ResponseBody> PostSignUpData(@FieldMap Map<String,String> map);
+
 }

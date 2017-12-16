@@ -1,5 +1,6 @@
 package com.example.dsm2017.appjam_hsc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         signin_id = (EditText) findViewById(R.id.EditText_id);
         signin_password = (EditText) findViewById(R.id.EditText_password);
-        signin_button = (Button) findViewById(R.id.signinButton);
-        signup_button = (Button) findViewById(R.id.signupButton);
+        signin_button = (Button) findViewById(R.id.signin_link);
+        signup_button = (Button) findViewById(R.id.signup_link);
 
         signin_button.setOnClickListener(new Button.OnClickListener(){
 
@@ -50,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
+                startActivity(intent);
             }
 
         });
@@ -74,16 +76,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.code() == 200 ){
-                    Log.d("RETROFIT","succssed");
+                    Log.d("RETROFIT","success");
+                    Toast.makeText(MainActivity.this, "성공적으로 로그인 되었습니다.", Toast.LENGTH_SHORT).show();
                 } else{
                     Log.d("RETROFIT","failed") ;
+                    Toast.makeText(MainActivity.this, "아이디를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Log.d("RETROFIT","try_failed");
-            }
+                Toast.makeText(MainActivity.this, "인터넷 연결을 확인해주세요.", Toast.LENGTH_SHORT).show();            }
         });
 
     }
